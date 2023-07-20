@@ -15,6 +15,7 @@ Cub3d challenged us to master Ray-Casting and the miniLibX library, expanding ou
 
 <img src="https://github.com/jasperbobasper/Cub3d/blob/main/gif/cub3d.gif"/>
 An example of the "beach.cub" map with some truly beautiful textures going on
+(the color shifting was caused by compressing when converting to gif and is not present in the actual game)
 
 ## Usage: 
 Map Configuration:
