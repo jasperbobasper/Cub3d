@@ -12,6 +12,7 @@
 
 #include "../incl/raycast.h"
 
+/* close window by clicking X */
 int	mouse_click(t_vars *vars)
 {
 	mlx_destroy_window(vars->mlx_ptr, vars->mlx_win);
@@ -19,6 +20,7 @@ int	mouse_click(t_vars *vars)
 	return (0);
 }
 
+/* close window with escape key */
 int	esc(int keycode, t_vars *vars)
 {
 	if (keycode == ESC_KEY)
@@ -29,6 +31,7 @@ int	esc(int keycode, t_vars *vars)
 	return (0);
 }
 
+/* kills display if user is on linux, not necessary for MacOS(causes crash)*/
 #if __linux__
 
 void	kill_disp(t_vars *vars)

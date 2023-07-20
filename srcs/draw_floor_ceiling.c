@@ -12,6 +12,7 @@
 
 #include "../incl/raycast.h"
 
+/* places a single pixel of color on coordinates */
 void	put_pixel(t_data *data, int x, int y, int color)
 {
 	char	*dst;

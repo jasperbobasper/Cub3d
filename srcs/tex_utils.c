@@ -12,6 +12,11 @@
 
 #include "../incl/raycast.h"
 
+/*
+	these check that the user input in the map file
+	for colours is valid
+*/
+
 char	*skip_spaces(char *line)
 {
 	int	x;

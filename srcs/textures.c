@@ -12,6 +12,14 @@
 
 #include "../incl/raycast.h"
 
+/* 
+	checking that the texture files provided by user
+	in map file are valid. 
+	Because memory needs to be allocated by this point, 
+	but the game is not fully initialised, a custom free
+	function needed to be made
+*/
+
 static void	free_norm(char *holder, t_vars *vars, char *exit)
 {
 	free(holder);

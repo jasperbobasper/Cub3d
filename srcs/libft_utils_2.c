@@ -12,6 +12,9 @@
 
 #include "../incl/raycast.h"
 
+/*
+	returns true if c is found in set, otherwise returns false
+*/
 static int	ft_char_in_set(char c, char const *set)
 {
 	size_t	i;
@@ -26,6 +29,10 @@ static int	ft_char_in_set(char c, char const *set)
 	return (0);
 }
 
+/* 
+	trims any characters from set from s1 
+	returns new trimmed string without altering original
+*/
 char	*ft_strtrim(char *s1, char *set)
 {
 	char	*str;
@@ -51,6 +58,9 @@ char	*ft_strtrim(char *s1, char *set)
 	return (str);
 }
 
+/*
+	prints error message and exits with code
+*/
 void	exit_msg(char *msg, int exit_code)
 {
 	ft_putstr(msg);
@@ -77,6 +87,9 @@ int	ft_strrchr_mod(char *string, char c)
 	return (-1);
 }
 
+/* 
+	converts string of digits to int with the value displayed in str
+*/
 int	ft_atoi(const char *str)
 {
 	int	val;

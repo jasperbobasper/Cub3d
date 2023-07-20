@@ -12,10 +12,22 @@
 
 #include "../incl/raycast.h"
 
-/*Assigns the main variable struct, which contains the mlx pointers and 
-pointers to all other structs. Also calls init functions for the 
-map and textures.*/
+/*
+	42's formatting guidelines restrict how many variables can be passed to 
+	a function, so structs are used to store necessary information
 
+		- t_vars is a general struct with pointers to the other necessary structs,
+			along with the mlx instance and window 
+		- t_player contains all of the information regarding player position
+		- t_textures contains pointers to the MLX images created from the textures, 
+			along with floor and ceiling color values
+		- t_data is a struct use to hold the necessary data to display an MLX image
+		- t_map contains the map array, and the map width and height values
+		- t_raycast holds all of the values that need to be updated upon movement 
+			to calculate rays.
+*/
+
+/* intialising mlx image from the mlx library */
 void	init_img(t_vars *vars)
 {
 	vars->img = (t_data *)malloc(sizeof(t_data));
@@ -25,6 +37,11 @@ void	init_img(t_vars *vars)
 					&vars->img->line_length, &vars->img->endian);
 }
 
+/*
+	Assigns the main variable struct, which contains the mlx pointers and 
+	pointers to all other structs. Also calls init functions for the 
+	map and textures.
+*/
 t_vars	*init_game(int fd)
 {
 	t_vars	*vars;
@@ -48,6 +65,9 @@ t_vars	*init_game(int fd)
 	return (vars);
 }
 
+/*
+	checking args, initialising game memory and calling the main hook functions
+*/
 int	main(int argc, char **argv)
 {
 	t_vars		*vars;

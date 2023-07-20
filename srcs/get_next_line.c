@@ -12,6 +12,11 @@
 
 #include "../incl/raycast.h"
 
+/* 
+	returns a file line by line on each call,
+	in this case trimming empty space
+*/
+
 char	*get_next_line(int fd)
 {
 	char	line[10000];

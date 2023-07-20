@@ -12,6 +12,9 @@
 
 #include "../incl/raycast.h"
 
+/*
+	get pixel color from texture coordinate so it can be mapped to the wall
+*/
 int	get_pix_colour(t_data *tex, int x, int y)
 {
 	unsigned int	*addr;
@@ -24,9 +27,12 @@ int	get_pix_colour(t_data *tex, int x, int y)
 	return (colour);
 }
 
-/*uses the side variable (which calculates if it's a n/s or w/e side
-together with the coordinates of the player in relation to map's x/c coord.
-to find which face of the block we are viewing*/
+/*
+	uses the side variable (which calculates if it's a n/s or w/e side
+	together with the coordinates of the player in relation to map's x/y coord.
+	to find which face of the block we are viewing, to be able to choose the 
+	appropriate texture
+*/
 
 void	draw_image(int x, t_raycast *ray, t_vars *ptr)
 {
@@ -54,6 +60,9 @@ void	draw_image(int x, t_raycast *ray, t_vars *ptr)
 	}
 }
 
+/* 
+	determinig when a ray is hitting a wall or not
+*/
 void	ray_hit_wall(t_raycast *ray, t_vars *vars)
 {
 	ray->hit = 0;

@@ -12,6 +12,9 @@
 
 #include "../incl/raycast.h"
 
+/*
+	updates "camera angle" based on button press
+*/
 void	look_right(t_vars *vars)
 {
 	double	old_dir_x;

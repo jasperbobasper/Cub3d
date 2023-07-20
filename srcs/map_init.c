@@ -12,6 +12,9 @@
 
 #include "../incl/raycast.h"
 
+/*
+	checks that user provided map is fully enclosed
+*/
 void	gap_check(char *buf, t_vars *vars)
 {
 	int	start;
@@ -41,6 +44,10 @@ void	gap_check(char *buf, t_vars *vars)
 	}
 }
 
+/*
+	checks user provided map for errors and then
+	creates array when everything checks out
+*/
 void	create_map_array(int fd, t_vars *vars)
 {
 	char	*buff;
@@ -68,6 +75,9 @@ void	create_map_array(int fd, t_vars *vars)
 		free_vars_exit("Haha. You tried.\n", vars, EXIT_FAILURE);
 }
 
+/*
+	find map width and height for array init
+*/
 void	map_width_height(t_map *map)
 {
 	int	longest;
@@ -88,6 +98,9 @@ void	map_width_height(t_map *map)
 	map->height = i;
 }
 
+/*
+	set player initial position from map
+*/
 void	never_eat_soggy_weetbix(t_player *player, char token)
 {
 	if (token == 'N')
@@ -112,6 +125,9 @@ void	never_eat_soggy_weetbix(t_player *player, char token)
 	}
 }
 
+/*
+	initialise player struct
+*/
 t_player	*init_player(int i, int j, char token)
 {
 	t_player	*player;

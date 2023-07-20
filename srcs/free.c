@@ -12,6 +12,13 @@
 
 #include "../incl/raycast.h"
 
+/* 
+	all free functions are called from free_vars_exit
+	to assure game is exited without leaks. 
+	memory is assigned both through the game functions
+	and MLX library. 
+*/
+
 void	free_array(char **array)
 {
 	int	i;

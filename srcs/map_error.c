@@ -12,6 +12,7 @@
 
 #include "../incl/raycast.h"
 
+/* checks map file has correct file extension */
 int	check_file_ext(char *filename, char *file_ext)
 {
 	if (ft_strncmp(file_ext, &filename[ft_strlen(filename) \
@@ -20,6 +21,12 @@ int	check_file_ext(char *filename, char *file_ext)
 	return (0);
 }
 
+/* 
+	checks characters from map
+	if the character is invald, exits game
+	if character is player token, return 1
+	else return 0
+*/
 int	ft_is_token(int c, t_vars *vars)
 {
 	if (c != '1' && c != '0' && c != ' ' && c != 'N' \

@@ -12,7 +12,10 @@
 
 #include "../incl/raycast.h"
 
-/*Assigns and creates img pointers to the xpm files, converts rgb to hex*/
+/*
+	Assigns and creates img pointers (MLX lib) to the xpm files, 
+	converts rgb from provided map to hex
+*/
 void	init_textures(int fd, t_vars *vars)
 {
 	t_textures	*ptr;

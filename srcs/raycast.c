@@ -12,6 +12,10 @@
 
 #include "../incl/raycast.h"
 
+/* 
+	sets the ray vector on the Y axis, based on character position and 
+	distance from walls. 
+*/
 void	set_y_vectors(t_raycast *ray, t_vars *vars)
 {
 	if (ray->ray_dir_y < 0)
@@ -30,6 +34,10 @@ void	set_y_vectors(t_raycast *ray, t_vars *vars)
 	}
 }
 
+/* 
+	sets the ray vector on the X axis, based on character position and 
+	distance from walls. 
+*/
 void	set_x_vectors(t_raycast *ray, t_vars *vars)
 {
 	if (ray->ray_dir_x < 0)
@@ -48,6 +56,12 @@ void	set_x_vectors(t_raycast *ray, t_vars *vars)
 	}
 }
 
+/* 
+	finding the coordinates of the walls to be drawn,
+	setting wall heights and lengths in struct to be 
+	passed to drawing functions.
+	Also mapping textures to walls 
+*/
 void	find_wall_coord(t_raycast *ray, t_vars *vars)
 {
 	if (ray->side == 0)
@@ -77,6 +91,11 @@ void	find_wall_coord(t_raycast *ray, t_vars *vars)
 		ray->tex_x = vars->tex->north->height - ray->tex_x - 1;
 }
 
+/* 
+	initialises rays based on current character and campera position
+	then finds vectors and wall positions before drawing the final image
+*/
+
 void	raycast(t_raycast *ray, t_vars *vars)
 {
 	int	x;
@@ -103,6 +122,10 @@ void	raycast(t_raycast *ray, t_vars *vars)
 	}
 }
 
+/*
+	first draws floot and ceiling, then adds walls with the raycast function. 
+	finally, image is displayed on window. 
+*/
 int	render_image(t_vars *vars)
 {
 	t_data		*image;

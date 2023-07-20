@@ -12,6 +12,11 @@
 
 #include "../incl/raycast.h"
 
+/*
+	ft_split splits string s at every instance of c,
+	and returns an array of substrings
+*/
+
 static int	ft_string_len(char const *s, char c)
 {
 	int	len;

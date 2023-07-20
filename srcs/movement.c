@@ -12,6 +12,10 @@
 
 #include "../incl/raycast.h"
 
+/*
+	update player position based on input key
+*/
+
 void	move_backward(t_vars *vars)
 {
 	if (vars->map->map_arr[(int)vars->player->pos_y][(int) \

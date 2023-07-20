@@ -12,6 +12,7 @@
 
 #include "../incl/raycast.h"
 
+/* allocates n * size and initialises to 0 */
 void	*ft_calloc(size_t n, size_t size)
 {
 	size_t	i;
@@ -29,6 +30,7 @@ void	*ft_calloc(size_t n, size_t size)
 	return (str);
 }
 
+/* returns length of null terminated string */
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -41,6 +43,9 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
+/* 
+	prints a string (in this case to error output)
+*/
 void	ft_putstr(char *s)
 {
 	int	i;
@@ -52,6 +57,16 @@ void	ft_putstr(char *s)
 	}
 }
 
+/*
+	compares up to n chars of str1 to str2
+	the function compares the strings character by character and 
+	returns as soon as a difference is found
+
+	return value:
+	<0 if str1 has lower value than str2
+	0 if strings are equals
+	>0 if str1 has higher value than str2
+*/
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
@@ -68,6 +83,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
+/*
+	returns true if char represents digit, 
+	else returns false
+*/
 int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
