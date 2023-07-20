@@ -1,6 +1,6 @@
 # Cub3d - Raycasting Time
 
-Cub3d is a group project where we created a 3D graphical representation of a maze from a first-person perspective, using Ray-Casting principles. The map is rendered from a user provided map file where a layout and texture files for the map are specified.
+Cub3d is a group project where we created a 3D graphical representation of a maze from a first-person perspective, using Ray-Casting principles. The map is rendered from a user provided map file where a layout and texture files for the map are specified. This project is functional on Linux and MacOS
 
 The Raycasting is all rendered pixel by pixel using mathematical calculations to determine the wall positions from the perspective of the player. 
 
@@ -28,4 +28,12 @@ Compilation:
   - run `make`
   - run program with `./cub3d <path/to/mapfile.cub>`
   - note- on wsl user must have a program such as XPM installed
-  - enjoy! 
+  - enjoy!
+
+## Personal Thoughts
+
+I really had a lot of fun as well as frustration on this project. 
+
+My project partner and I got along really well, however we used a different coworking technique than I usually would do, in that we actually did most of the coding together at the same time. It was interesting that in the end, the project took around as long as I would have expected if we had split up the work and approached it seperately, as when we were working together we were able to keep each other on track and help each other make good decisions. I feel like that really helped us avoid many hours of debugging and editing. 
+
+Neither of us were particularly mathematically inclined people, so it took a lot of time for us to understand the algorithms that we wanted to use so that we could alter them to fit our specific needs and the very (!!) strict school guidelines regarding function length and amount of variables. So while a lot of this project did feel like an uphill battle, I was happy in the end with what I was able to produce with such minimal tools :) 
