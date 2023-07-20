@@ -1,8 +1,5 @@
 # Cub3d - Raycasting Time
 
-⚠️ Code coming soon! ⚠️
-
-
 Cub3d is a group project where we created a 3D graphical representation of a maze from a first-person perspective, using Ray-Casting principles. The map is rendered from a user provided map file where a layout and texture files for the map are specified.
 
 The Raycasting is all rendered pixel by pixel using mathematical calculations to determine the wall positions from the perspective of the player. 
@@ -15,6 +12,9 @@ Key features:
   - Program exit with ESC key or window close.
 
 Cub3d challenged us to master Ray-Casting and the miniLibX library, expanding our 3D graphics skills. This was a very positive collaborative experience for me, as we were able to work together very smoothly and learned a lot from each other's methods and skills. 
+
+<img src="https://github.com/jasperbobasper/Cub3d/blob/main/gif/cub3d.gif"/>
+An example of the "beach.cub" map with some truly beautiful textures going on
 
 ## Usage: 
 Map Configuration:
